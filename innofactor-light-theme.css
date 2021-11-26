@@ -455,8 +455,9 @@ html {
   --ls-tag-person-background-color: linear-gradient(110deg, #bff3e3 0%, #b9f5eb 10%,  #73d8cb 20%, #73d8a9 22%, #97e5d8 30%, #adffed 50%, #bff3db 80%); 
 
 
-  --ls-tag-mpe-color: #00f6ff;
-  --ls-tag-mpe-background-color: linear-gradient(108deg,  #2e2e2e 10%, #4c4c4c 30%, #000000 70%,#9f9f9f 100%);
+  --ls-tag-mpe-color: #ffdd00;
+  --ls-tag-mpe-background-color: linear-gradient(108deg,  #850000 10%, #870000 30%, #db0000 70%,#540000 100%);
+
 
   --ls-tag-backlog-color: #ffffff;
   --ls-tag-backlog-background-color: linear-gradient(110deg, #5a2100 0%, #441900 10%, #ad4e00 40%, #692d1b 80%);
