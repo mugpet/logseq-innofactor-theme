@@ -3,6 +3,6 @@
     "description": "Theme based on Innofactor colors",
     "author": "mugpet",
     "repo": "mugpet/logseq-innofactor-theme",
-    "icon": "",
+    "icon": "icon.png",
     "theme": true
   }

@@ -1,18 +1,18 @@
 {
-    "name": "logseq-innofactor-theme",
+    "name": "Innofactor light theme",
     "author": "mugpet",
     "version": "1.0.0",
-    "description": "Such a beautiful lighten theme 🔆 / ☕️",
+    "description": "Such a beautiful lighten theme",
     "logseq": {
       "themes": [
         {
           "name": "Innofactor light theme",
           "url": "./innofactor-light-theme.css",
-          "description": "Such a beautiful lighten theme 🔆",
+          "description": "Such a beautiful lighten theme",
           "mode": "light"
         }       
       ],
-      "id": "iuerytio34",
-      "icon": ""
+      "id": "innofactorLT",
+      "icon": "icon.png"
     }
   }
