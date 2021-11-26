@@ -58,9 +58,6 @@ body[data-page] #main-content-container {
 }
 
 
-
-
-
   
   html {
     --ls-primary-background-color: #ffffff;
@@ -396,6 +393,9 @@ html {
   /* --ls-tag-background-color:  linear-gradient(110deg, #204ed8 16%, #003fb4 20%, #204ed8 24%, #204ed8 26%,  #003fb4 38%,  #003fb4 68%,#204ed8 100%); */
   --ls-tag-background-color:  linear-gradient(108deg, #003fb4 10%, #0038a0 30%, #0046c7 70%,#003fb4 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
   
+
+
+
   
   --ls-tag-background-color-rosegold:  linear-gradient(110deg, #ffddce 8%, #f1bea9 16%, #ffd1bd 24%,  #ffddce 36%, #f9eae3 60%, #ffddce 90%,#ffddce 100%); /* Rosegold */
   --ls-tag-background-color-bronzed:  linear-gradient(108deg, #dcc8ae 8%, #bdaa95 14%, #dcc8ae 24%,  #dcc8ae 44%, #ffecd5 60%, #dcc8ae 100%); /* Bronze */
@@ -454,6 +454,10 @@ html {
   --ls-tag-person-color: #000;
   --ls-tag-person-background-color: linear-gradient(110deg, #bff3e3 0%, #b9f5eb 10%,  #73d8cb 20%, #73d8a9 22%, #97e5d8 30%, #adffed 50%, #bff3db 80%); 
 
+
+  --ls-tag-mpe-color: #00f6ff;
+  --ls-tag-mpe-background-color: linear-gradient(108deg,  #2e2e2e 10%, #4c4c4c 30%, #000000 70%,#9f9f9f 100%);
+
   --ls-tag-backlog-color: #ffffff;
   --ls-tag-backlog-background-color: linear-gradient(110deg, #5a2100 0%, #441900 10%, #ad4e00 40%, #692d1b 80%);
 }
@@ -467,10 +471,10 @@ html {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  color: var(--ls-tag-text-color,#045591);
   font-family: var(--ls--font-family-tag), sans-serif;
   opacity: 1;
   background: var(--ls-tag-background-color);
+  color: #fdfeff;
   border-radius: 3px;
   padding: 2px 5px;
   /* box-shadow: inset 0px -2px 5px -3px #333; */
@@ -567,6 +571,11 @@ a[data-ref="karate"].tag, a[data-ref="graduering"].tag,a[data-ref="kobudo"].tag,
   background: var(--ls-tag-skk-background-color) !important;
 }
 
+  a[data-ref="mugo petersen"].tag, a[data-ref="me"].tag {
+  color: var(--ls-tag-mpe-color) !important;
+  background: var(--ls-tag-mpe-background-color) !important;
+}
+
 a[data-ref="person"].tag, a[data-ref="member"].tag,a[data-ref="user"].tag {
   color: var(--ls-tag-person-color) !important;
   background: var(--ls-tag-person-background-color) !important;
@@ -577,7 +586,8 @@ a[data-ref="backlog"].tag {
   background: var(--ls-tag-backlog-background-color) !important;
 }
 
-a[data-ref="Andreas Kløv"].tag,
+a[data-ref="andreas kløv"].tag,
+a[data-ref="anne mette Koch"].tag, a[data-ref="anders nordstrand"].tag,
 a[data-ref="jacek rosik"].tag, a[data-ref="claus ringby"].tag, a[data-ref="peter palmqvist"].tag,
 a[data-ref="michael giese"].tag, a[data-ref="thomas friberg knudsen"].tag, a[data-ref="wibekke risan"].tag,
 a[data-ref="joan blomsterberg"].tag, a[data-ref="mats nilhäll"].tag, a[data-ref="lone riise"].tag,
@@ -601,6 +611,39 @@ div[data-refs-self~=\[\"\*\*\*\"\]].ls-block  .block-content-wrapper  span.inlin
   padding: 2px 5px;
 } 
 
+
+/* PDF */
+
+/* .asset-ref .is-pdf
+*/
+
+div[data-ext="pdf"] {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.75em;
+    font-weight: 600;
+    overflow: hidden;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    vertical-align: middle;
+    height: 23px;
+    padding: 2px 10px 0px 10px;
+    word-break: break-all;
+    border-radius: 30px 2px 30px 2px;
+    border: 1px solid #ff5e00;
+    background:  #fff;
+    color: #ac3f00;
+  }
+  
+  div[data-ext="pdf"] .asset-ref.is-pdf:before {
+    content: "";
+    margin-right: 0;
+  }
+  div[data-ext="pdf"] .asset-ref.is-pdf:after {
+    content: "";
+    margin-left: 0;
+  }
 
 
 
