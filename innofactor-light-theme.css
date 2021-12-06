@@ -431,6 +431,10 @@ html {
   --ls-tag-answer-color: #000000;
   --ls-tag-answer-background-color: linear-gradient(108deg,  #7ef8bf 10%, #2cff8b 30%, #afffe7 70%,#7ef8bf 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
 
+
+  --ls-tag-green-color: #fffff9;
+  --ls-tag-green-background-color: linear-gradient(108deg,  #06b600 10%, #047900 30%, #06b600 70%,#047900 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
+
   --ls-tag-prod-color: rgb(43, 43, 43);
   --ls-tag-prod-background-color: #87eeba;
 
@@ -548,6 +552,10 @@ a[data-ref="yellow"].tag
 a[data-ref="answer"].tag, a[data-ref="faq"].tag, a[data-ref="conclusion"].tag, a[data-ref="fixed"].tag {
   color: var(--ls-tag-answer-color) !important;
   background: var(--ls-tag-answer-background-color) !important;
+}
+a[data-ref="green"].tag {
+  color: var(--ls-tag-green-color) !important;
+  background: var(--ls-tag-green-background-color) !important;
 }
 
 a[data-ref="DONE"].tag,a[data-ref="afsluttet"].tag, a[data-ref="done"].tag, a[data-ref="godkendt"].tag, a[data-ref="approved"].tag, a[data-ref="prod"].tag, a[data-ref="prod-server"].tag {
