@@ -31,7 +31,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
 
 
- body {
+ body { 
   --ls--font-family: "Inter";
   --ls--font-family-title: "Maven Pro";
   --ls--font-family-headings: "Maven Pro";
@@ -55,11 +55,15 @@ body[data-page] #main-content-container {
   margin-top: 0 !important;
   padding-left: 2em !important;
   padding-right: 2em !important;
+
+
 }
 
 
-  
-  html {
+.white-theme, html[data-theme=light] {
+    --ph-highlight-color-green: #00a349;
+    --ph-highlight-color-blue: rgb(0, 102, 218);
+
     --ls-primary-background-color: #ffffff;
     --ls-secondary-background-color: #f8f8f8;
     --ls-tertiary-background-color: #ffffff;
@@ -82,20 +86,18 @@ body[data-page] #main-content-container {
     --ls-secondary-text-color: #112b42;
 
     --ls-title-text-color: #002ca5;
-    --ls-h2-text-color: #00379e;
-    --ls-h3-text-color: #bd00a4;
-    --ls-h4-text-color: #400eb4;
-    --ls-h5-text-color: #cf00be;
-    /* --ls-title-text-color: #393166;
-    --ls-h3-text-color: #393166; */
+    --ls-h2-text-color: #002ca5;
+    --ls-h3-text-color: #002ca5;
+    --ls-h4-text-color: #770eb4;
+    --ls-h5-text-color: #d1006a;
 
-    --ls-link-text-color: #003fb1;
-    --ls-link-text-hover-color: #0052af;
+    --ls-link-text-color: #002ca5;
+    --ls-link-text-hover-color: #002ca5;
 
     --ls-external-link-text-color: #543ea5;
     
-    --ls-link-ref-text-color: #bd007e;
-    --ls-link-ref-text-hover-color: #ce009a;
+    --ls-link-ref-text-color: #d1006a;
+    --ls-link-ref-text-hover-color: #ff0080;
 
 
   
@@ -105,8 +107,8 @@ body[data-page] #main-content-container {
     --ls-block-bullet-border-color: #d8d8d8;
     --ls-block-bullet-color: #d8d8d8;
   
-    --ls-block-highlight-color: #e7b2d35d;
-    --ls-selection-background-color: #ffec98e5;
+    --ls-block-highlight-color: #6bdbc957;
+    --ls-selection-background-color: #98fff1e5;
     
     --ls-page-checkbox-color: #00115a; 
     --ls-page-checkbox-border-color: #727272;
@@ -115,8 +117,8 @@ body[data-page] #main-content-container {
     --ls-page-checkbox-checked-color:#d8d8d8;  */
   
     --ls-page-blockquote-color: #333333;
-    --ls-page-blockquote-bg-color: #f3b7ff8f;
-    --ls-page-blockquote-border-color: #ff8cd3;
+    --ls-page-blockquote-bg-color: #68ffff8f;
+    --ls-page-blockquote-border-color: #2effe3;
   
     --ls-page-inline-code-bg-color: #fbfafc;
     --ls-page-inline-code-color: #002f94;
@@ -146,10 +148,21 @@ body[data-page] #main-content-container {
 
 
 
+h1 {
+  font-weight: 400;
+  margin-top: 0;
+  font-size: 1.6rem !important;
+  color: var(--ls-title-text-color,#222);
+  font-family: var(--ls--font-family-title), sans-serif;
+  margin-top: 0.8em !important;
+  margin-bottom: 0.4em !important;
+}
+
+
 
 h1.title {
   font-size: 2.6rem !important;
-  margin-top: 0;
+  margin-top: 0 !important;
   margin-bottom: 1.5rem;
   color: var(--ls-title-text-color,#222);
   /* font-size: var(--ls-page-title-size,36px); */
@@ -157,17 +170,9 @@ h1.title {
   font-family: var(--ls--font-family-title), sans-serif;
 }
 
-h1 {
-  font-weight: 500;
-  margin-top: 0;
-  font-size: 1.8rem !important;
-  color: var(--ls-title-text-color,#222);
-  font-family: var(--ls--font-family-title), sans-serif;
-}
-
 
 h2 {
-  font-size: 1.4rem !important;
+  font-size: 1.3rem !important;
   font-weight: 500 !important;
   font-family: var(--ls--font-family-headings), sans-serif;
   color: var(--ls-h2-text-color,#222);
@@ -175,11 +180,11 @@ h2 {
 }
 
 h3 {
-  color: var(--ls-h3-text-color,#222);
-  font-size: 1.2rem !important;
-  font-weight: 500 !important;
+  color: #002ca5;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
   font-family: var(--ls--font-family-headings), sans-serif;
-  margin-top: 0.4em;
+  margin-top: 0.2em;
 }
 
 h4 {
@@ -285,7 +290,7 @@ code {
   display: inline-block;
   text-decoration: none;
   font-size: 0.75em;
-  font-weight: 600;
+  font-weight: 500;
   max-width: 300px; 
   /* max-height: 38px;  */
   overflow: hidden;
@@ -298,10 +303,10 @@ code {
   /* padding-top: 1px; */
   word-break: break-all;
   border-radius: 30px 2px 30px 2px;
-  border: 1px solid #cedce9;
-  background:  linear-gradient(106deg, #f1f8ff 0%, #e1eaf3 42px, rgb(255, 255, 255) 50px, rgb(255, 255, 255) 100%);
+  border: 1px solid #c9c9c9;
+  background:  linear-gradient(108deg, #f8f8f8 0%, #ececec 44px, rgb(255, 255, 255) 50px, rgb(255, 255, 255) 100%);
   /* border-left: 3px solid #5971c9; */
-  color: #26418d;
+  color: #272727;
 }
 
 
@@ -360,6 +365,10 @@ mark {
 }
 
 
+.page-property-key {
+  color: #888;
+
+}
 
 
 /**************************** 
@@ -384,14 +393,14 @@ mark {
 html {
   /* tag defaults */
   --ls-tag-text-color: #ffffff;
-  --ls-tag-text-hover-color: #ea00ff;
+  --ls-tag-text-hover-color: #cfcfcf;
   /* --ls-tag-background-color: linear-gradient(174deg, rgb(255 86 0 / 35%) 0%, rgb(241 241 241) 25%, rgb(255 250 244) 50%, rgb(255 255 255) 100%); */
   /* --ls-tag-background-color:  linear-gradient(120deg, #aaaaaa 0%, #d0d0d0 25%, #f4f4f4 40%, #dadada 65%, #eaeaea 90%, #a0a0a0 100%); */
   /* --ls-tag-background-color:  linear-gradient(110deg, #DeDeDe 8%, #f8f8f8 25%, #f0f0f0 35%,  #e0e0e0 60%, #DeDeDe 80%, #f0f0f0 85%, #e0e0e0 94%); */
   /* --ls-tag-background-color:  linear-gradient(110deg, #f0f0f0 0%, #e6e6e6 4%, #ececec 26%, #e6e6e6 46%, #ececec 64%,  #F4f4F4 68%, #ececec 72%, #f0f0f0 80%, #E6E6E6 96%); */
   
   /* --ls-tag-background-color:  linear-gradient(110deg, #204ed8 16%, #003fb4 20%, #204ed8 24%, #204ed8 26%,  #003fb4 38%,  #003fb4 68%,#204ed8 100%); */
-  --ls-tag-background-color:  linear-gradient(108deg, #003fb4 10%, #0038a0 30%, #0046c7 70%,#003fb4 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
+  --ls-tag-background-color:  linear-gradient(108deg, #2965d3 10%, #1654c5 30%, #2965d3 70%,#1654c5 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
   
 
 
@@ -407,14 +416,14 @@ html {
   --ls-tag-performance-background-color: linear-gradient(108deg,  #008f99 10%, #007179 30%, #14abb6 70%,#008f99 100%);
 
   --ls-tag-customer-contact-color: #fff;
-  --ls-tag-customer-contact-background-color: linear-gradient(108deg, #7900ca 10%, #6800ad 30%, #9801df 70%,#7900ca 100%);
+  --ls-tag-customer-contact-background-color: linear-gradient(108deg, #9f57cf 10%, #8f48be 30%, #8f48be 70%,#9f57cf 100%);
 
 
   --ls-tag-bug-color: #fff;
-  --ls-tag-bug-background-color: linear-gradient(108deg, #ca0000 10%, #b70000 30%, #de0000 70%,#ca0000 100%);
+  --ls-tag-bug-background-color: linear-gradient(108deg, #cc5757 10%, #c04343 30%, #cc5757 70%,#a84242 100%);
 
   --ls-tag-important-color: #fff;
-  --ls-tag-important-background-color: linear-gradient(108deg,  #ce2582 10%, #cd227f 30%, #e1499c 70%,#ce2582 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
+  --ls-tag-important-background-color: linear-gradient(108deg,  #d1417d 10%, #c7145e 30%, #c7145e 70%,#d1417d 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
 
   --ls-tag-private-color: #000;
   --ls-tag-private-background-color:  linear-gradient(108deg, #dcc8ae 8%, #bdaa95 14%, #dcc8ae 24%,  #dcc8ae 44%, #ffecd5 60%, #dcc8ae 100%); /* Bronze */
@@ -426,14 +435,14 @@ html {
   --ls-tag-test-background-color: #ffdd1c;
 
   --ls-tag-question-color: #000000;
-  --ls-tag-question-background-color: linear-gradient(108deg,  #ffb71c 10%, #f4a600 30%, #ffc343 70%,#ffb71c 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
+  --ls-tag-question-background-color: linear-gradient(108deg,  #ffdd43 10%, #ffc400 30%, #ffdd43 70%,#ffc400 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
   
   --ls-tag-answer-color: #000000;
   --ls-tag-answer-background-color: linear-gradient(108deg,  #7ef8bf 10%, #2cff8b 30%, #afffe7 70%,#7ef8bf 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
 
 
   --ls-tag-green-color: #fffff9;
-  --ls-tag-green-background-color: linear-gradient(108deg,  #06b600 10%, #047900 30%, #06b600 70%,#047900 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
+  --ls-tag-green-background-color: linear-gradient(108deg,  #2ba874 10%, #318a60 30%, #259768 70%,#46926f 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
 
   --ls-tag-prod-color: rgb(43, 43, 43);
   --ls-tag-prod-background-color: #87eeba;
@@ -442,7 +451,7 @@ html {
   --ls-tag-code-background-color: #2557df;
 
   --ls-tag-waiting-color: #f5f5f5;
-  --ls-tag-waiting-background-color: linear-gradient(108deg,  #6d0ec6 10%, #630db4 30%, #8111eb 70%,#6d0ec6 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
+  --ls-tag-waiting-background-color: linear-gradient(108deg,  #6d0ec6 10%, #630db4 30%, #8c22ee 70%,#6d0ec6 100%); /* main-color, 1 level darker than main, 1 level lighter than main, main-color */
 
   --ls-tag-core-color: #000000; 
   /* https://cssgradient.io/ */
@@ -459,8 +468,8 @@ html {
   --ls-tag-person-background-color: linear-gradient(110deg, #bff3e3 0%, #b9f5eb 10%,  #73d8cb 20%, #73d8a9 22%, #97e5d8 30%, #adffed 50%, #bff3db 80%); 
 
 
-  --ls-tag-mpe-color: #ffdd00;
-  --ls-tag-mpe-background-color: linear-gradient(108deg,  #850000 10%, #870000 30%, #db0000 70%,#540000 100%);
+  --ls-tag-mpe-color: #fffefa;
+  --ls-tag-mpe-background-color: linear-gradient(108deg,  #3c8eb4 10%, #2d84ac 30%, #2d84ac 70%,#3c8eb4 100%);
 
 
   --ls-tag-backlog-color: #ffffff;
@@ -479,13 +488,16 @@ html {
   font-family: var(--ls--font-family-tag), sans-serif;
   opacity: 1;
   background: var(--ls-tag-background-color);
-  color: #fdfeff;
+  /* color: var(--ls-tag-text-color); */
+  color: #fff;
   border-radius: 3px;
   padding: 2px 5px;
   /* box-shadow: inset 0px -2px 5px -3px #333; */
 } 
 
-
+a.tag:hover {
+  color: #fff;
+}
 
 
 a[data-ref="new"].tag {
@@ -500,7 +512,7 @@ a[data-ref="design"].tag, a[data-ref="development"].tag, a[data-ref="udvikling"]
 }
 
 a[data-ref="bug"].tag, 
-a[data-ref="red"].tag, 
+a[data-ref="red"].tag, a[data-ref="rød"].tag, 
 a[data-ref="Bug"].tag, a[data-ref="critical"].tag,  a[data-ref="error"].tag, a[data-ref="delete"].tag  {
   color: var(--ls-tag-bug-color) !important;
   background: var(--ls-tag-bug-background-color) !important;  
@@ -543,7 +555,7 @@ a[data-ref="testing"].tag, a[data-ref="test"].tag, a[data-ref="test-server"].tag
   background: var(--ls-tag-test-background-color) !important;
 }
 
-a[data-ref="yellow"].tag
+a[data-ref="yellow"].tag, a[data-ref="gul"].tag
 ,a[data-ref="how"].tag, a[data-ref="how-to"].tag, a[data-ref="question"].tag {
   color: var(--ls-tag-question-color) !important;
   background: var(--ls-tag-question-background-color) !important;
@@ -553,7 +565,7 @@ a[data-ref="answer"].tag, a[data-ref="faq"].tag, a[data-ref="conclusion"].tag, a
   color: var(--ls-tag-answer-color) !important;
   background: var(--ls-tag-answer-background-color) !important;
 }
-a[data-ref="green"].tag {
+a[data-ref="green"].tag, a[data-ref="grøn"].tag {
   color: var(--ls-tag-green-color) !important;
   background: var(--ls-tag-green-background-color) !important;
 }
@@ -641,10 +653,17 @@ div[data-ext="pdf"] {
     word-break: break-all;
     border-radius: 30px 2px 30px 2px;
     border: 1px solid #ff5e00;
-    background:  #fff;
-    color: #ac3f00;
+    background:  #ffede0;
   }
   
+  div[data-ext="pdf"]:hover {
+    background:  #ffdfc8; 
+  }
+  
+  div[data-ext="pdf"] a {
+    color: #494949 !important;
+  }
+
   div[data-ext="pdf"] .asset-ref.is-pdf:before {
     content: "";
     margin-right: 0;
